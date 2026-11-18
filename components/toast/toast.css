@@ -1,0 +1,175 @@
+.toast-container {
+    position: fixed;
+    bottom: 100px; /* Justo encima de tu barra de navegación inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 30px);
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2000;
+    pointer-events: none; /* Permite hacer clic a través del contenedor vacío */
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.toast-container * {
+    box-sizing: border-box;
+}
+
+.toast {
+    pointer-events: auto;
+    background-color: #fff9fa;
+    color: #5c1f2c;
+    border: 1.5px solid #f29cab;
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(143, 59, 77, 0.22),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    
+    /* Animación inicial (oculto abajo) */
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.toast.hide {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+}
+
+/* Icono izquierdo */
+.toast-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background-color: #ffd6de;
+    color: #8f3b4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Contenido de texto */
+.toast-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.toast-title {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #8f3b4d;
+}
+
+.toast-message {
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: #5c1f2c;
+    line-height: 1.35;
+}
+
+/* Botón cerrar */
+.toast-close {
+    background: transparent;
+    border: none;
+    color: #b56576;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toast-close:hover {
+    background-color: #ffd6de;
+    color: #8f3b4d;
+}
+
+/* Barra de tiempo inferior */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #f29cab;
+    transform-origin: left;
+    animation: toast-shrink linear forwards;
+}
+
+@keyframes toast-shrink {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}
+
+/* =========================================
+   VARIANTES DE COLOR
+   ========================================= */
+/* Variante Pink (Fuerte) */
+.toast-pink {
+    background-color: #ffb6c1;
+    border-color: #e08293;
+}
+
+.toast-pink .toast-icon {
+    background-color: #fff9fa;
+    color: #8f3b4d;
+}
+
+.toast-pink .toast-progress {
+    background-color: #8f3b4d;
+}
+
+/* Variante Accent (Vino oscuro) */
+.toast-accent {
+    background-color: #8f3b4d;
+    border-color: #5c1f2c;
+    color: #fff9fa;
+}
+
+.toast-accent .toast-title {
+    color: #ffd6de;
+}
+
+.toast-accent .toast-message {
+    color: #fff9fa;
+}
+
+.toast-accent .toast-icon {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffb6c1;
+}
+
+.toast-accent .toast-close {
+    color: #ffb6c1;
+}
+
+.toast-accent .toast-close:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff9fa;
+}
+
+.toast-accent .toast-progress {
+    background-color: #ffb6c1;
+}

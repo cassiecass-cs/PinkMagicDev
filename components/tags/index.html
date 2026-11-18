@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Rosa UI</title>
+    <!-- Fuente Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Librería de iconos (Remix Icon) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="tags.css">
+</head>
+<body style="background-color: #fff5f7; font-family: 'Poppins', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+    <!-- Variantes de Color -->
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <span class="tag">Default (Rosa claro)</span>
+        <span class="tag tag-primary">Primary (Rosa medio)</span>
+        <span class="tag tag-accent">Accent (Vino oscuro)</span>
+        <span class="tag tag-outline">Outline (Borde sutil)</span>
+    </div>
+
+    <!-- Tags con Iconos -->
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <span class="tag tag-primary">
+            <i class="ri-heart-3-fill"></i> Favorito
+        </span>
+        <span class="tag tag-accent">
+            <i class="ri-sparkling-fill"></i> Nuevo
+        </span>
+        <span class="tag">
+            <i class="ri-price-tag-3-line"></i> Coleccionable
+        </span>
+    </div>
+
+    <!-- Tags interactivos (con efecto hover / botón de cierre opcional) -->
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <button type="button" class="tag tag-interactive">
+            <span>Filtro activo</span>
+            <i class="ri-close-line"></i>
+        </button>
+        <button type="button" class="tag tag-interactive tag-primary">
+            <span>Videojuegos</span>
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+
+</body>
+</html>

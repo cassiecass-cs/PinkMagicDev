@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Rosa UI</title>
+    <!-- Fuente Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Librería de iconos (Remix Icon) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body style="background-color: #fff5f7; font-family: 'Poppins', sans-serif; padding: 30px; display: flex; gap: 12px;">
+
+    <!-- Botones de prueba -->
+    <button id="btn-open-static" style="padding: 12px 20px; border-radius: 14px; border: none; background: #f29cab; color: #fff9fa; font-weight: 700; cursor: pointer;">
+        Abrir Modal HTML
+    </button>
+    <button id="btn-open-dynamic" style="padding: 12px 20px; border-radius: 14px; border: none; background: #8f3b4d; color: #fff9fa; font-weight: 700; cursor: pointer;">
+        Abrir Confirmación TS
+    </button>
+
+    <!-- Componente Modal base -->
+    <div id="demo-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <div class="modal-icon">
+                        <i class="ri-heart-3-fill"></i>
+                    </div>
+                    <div>
+                        <h3 class="modal-title">Título del Modal</h3>
+                        <span class="modal-subtitle">Subtítulo opcional</span>
+                    </div>
+                </div>
+                <button type="button" class="modal-close" data-modal-close aria-label="Cerrar">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>Aquí puedes colocar cualquier texto, formulario o confirmación manteniendo toda la estética pastel y bordes suaves de tu librería.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="modal-btn modal-btn-secondary" data-modal-close>Cancelar</button>
+                <button type="button" class="modal-btn modal-btn-primary" id="btn-confirm-static">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

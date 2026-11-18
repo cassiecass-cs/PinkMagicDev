@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Componente Rosa UI</title>
+    <!-- Fuente Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="img.css">
+</head>
+<body style="background-color: #fff5f7; font-family: 'Poppins', sans-serif; padding: 30px; display: flex; flex-direction: column; gap: 24px; max-width: 480px; margin: 0 auto;">
+
+    <!-- 1. Imagen estándar con marco suave y efecto zoom al pasar el cursor -->
+    <div class="img-box">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80" alt="Ejemplo estándar" class="img-fluid">
+    </div>
+
+    <!-- 2. Imagen con pie de foto (Caption) -->
+    <figure class="img-box img-captioned">
+        <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=800&q=80" alt="Ejemplo con descripción" class="img-fluid">
+        <figcaption class="img-caption">Descripción o pie de foto con fondo rosa pastel.</figcaption>
+    </figure>
+
+    <!-- 3. Variantes de Avatar / Miniatura circular y cuadrada -->
+    <div style="display: flex; gap: 16px; align-items: center;">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=300&q=80" alt="Avatar circular" class="img-avatar">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=300&q=80" alt="Miniatura redondeada" class="img-thumb">
+    </div>
+
+</body>
+</html>

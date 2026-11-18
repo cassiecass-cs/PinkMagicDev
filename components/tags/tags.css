@@ -1,0 +1,72 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    background-color: #ffd6de;
+    color: #8f3b4d;
+    border: 1px solid rgba(242, 156, 171, 0.4);
+    box-shadow: 0 2px 6px rgba(143, 59, 77, 0.08);
+    user-select: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.tag * {
+    box-sizing: border-box;
+}
+
+.tag i {
+    font-size: 0.95rem;
+}
+
+/* Variante Primary (Rosa medio característico) */
+.tag-primary {
+    background-color: #f29cab;
+    color: #fff9fa;
+    border-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 1px rgba(143, 59, 77, 0.2);
+}
+
+/* Variante Accent (Vino oscuro) */
+.tag-accent {
+    background-color: #8f3b4d;
+    color: #fff9fa;
+    border-color: #5c1f2c;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Variante Outline (Fondo limpio con borde marcado) */
+.tag-outline {
+    background-color: #fff9fa;
+    color: #8f3b4d;
+    border-color: #f29cab;
+}
+
+/* Variante Interactiva (Para filtros o elementos removibles) */
+button.tag {
+    cursor: pointer;
+    border: 1px solid rgba(242, 156, 171, 0.5);
+}
+
+button.tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(143, 59, 77, 0.15);
+}
+
+button.tag:active {
+    transform: scale(0.96);
+}
+
+.tag-interactive i {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.tag-interactive:hover i {
+    opacity: 1;
+}
